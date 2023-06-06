@@ -1,1 +1,1 @@
-# MovieTracker is a web application for manage favourite movies
+# MovieTracker is a web application for storing your favourite movies
