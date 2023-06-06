@@ -1,0 +1,92 @@
+nav.nav {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  nav.nav h1 {
+    font-size: 18px;
+    color: #332;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Styles for the movie list */
+  #movie-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .movie {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .movie img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .movie p {
+    margin: 0;
+  }
+  
+  /* Styles for the movie form */
+  #add-movie {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #add-movie label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #add-movie input[type="text"],
+  #add-movie input[type="number"],
+  #add-movie input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #add-movie input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #add-movie input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  #preview {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the sort button */
+  #sort-by-rating {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #sort-by-rating:hover {
+    background-color: #555;
+  }
