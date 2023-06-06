@@ -23,11 +23,11 @@ class Movie {
             const elapsedSeconds = Math.floor(elapsedMilliseconds / ONE_SECOND);
             if (elapsedSeconds === 1) {
                 return `Added ${elapsedSeconds} second ago`;
-            }else{
+            } else {
                 return `Added ${elapsedSeconds} seconds ago`;
             }
-           
-        }  if (elapsedMilliseconds < ONE_HOUR) {
+
+        } if (elapsedMilliseconds < ONE_HOUR) {
             const elapsedMinutes = Math.floor(elapsedMilliseconds / ONE_MINUTE);
             if (elapsedMinutes === 1) {
                 return `Added ${elapsedMinutes} minute ago`;
@@ -36,7 +36,7 @@ class Movie {
                 return `Added ${elapsedMinutes} minutes ago`;
             }
 
-        }  if (elapsedMilliseconds < ONE_DAY) {
+        } if (elapsedMilliseconds < ONE_DAY) {
             const elapsedHours = Math.floor(elapsedMilliseconds / ONE_HOUR);
             if (elapsedHours === 1) {
                 return `Added ${elapsedHours} hour ago`;
@@ -67,5 +67,20 @@ class Movie {
                 <img src = "${this.image}">
             </li>
         `;
+    }
+
+    renderMovieAsTable() {
+        const movieTable = document.querySelector('#movie-table');
+        const timeElapsed = this.getTimeElapsed();
+        movieTable.innerHTML += `
+    <tr class="movie">
+      <td>${this.name}</td>
+      <td>${this.description}</td>
+      <td>${this.releasedYear}</td>
+      <td>${this.rating}</td>
+      <td>${this.addedDate} ${timeElapsed}</td>
+      <td><img src="${this.image}" alt="${this.name}"></td>
+    </tr>
+         `;
     }
 }

@@ -34,32 +34,37 @@ const movies = [
     }
 ];
 
-// Functie folosita pentru a extrage filmele din localStorage
+// function used to extract the movies from localStorage
 function getMovies() {
-    // Extragem valoarea corespunzatoare cheii "movies".
+    // extract the value corresponding to the "movies" key
     const localStorageMovies = localStorage.getItem(MOVIES_KEY);
-    // Transformam filmele din string in vector de obiecte.
+    // extract the value corresponding to the "movies" key
     const parsedMovies = JSON.parse(localStorageMovies);
-    // Returnam filmele.
     return parsedMovies;
 }
 
-// Functie folosita pentru a adauga filmele in localStorage
+// function used to add movies to localStorage
 function setMovies(movies) {
-    // Parametrul primit este transformat in sir de caracter.
+    // the received parameter is transformed into a string
     const stringifiedMovies = JSON.stringify(movies);
-    // Setam valoarea corespunzatoare in localStorage.
+    // set the corresponding value in localStorage.
     localStorage.setItem(MOVIES_KEY, stringifiedMovies);
 }
 
-// Daca nu avem filmele in localStorage, atunci le adaugam.
-if (getMovies() === null){
+// if we don't have the movies in localStorage, then we add them
+if (getMovies() === null) {
     setMovies(movies);
 }
 
 function startRendering() {
-    // Filmele afisate pe ecran sunt preluate din localStorage.
+    // Movies displayed on the screen are taken from localStorage
     const localStorageMovies = getMovies();
     renderMovieList(localStorageMovies);
 }
+
+function startRenderingTable() {
+    const localStorageMovies = getMovies();
+    renderMovieTable(localStorageMovies);
+}
+
 window.addEventListener('load', startRendering);

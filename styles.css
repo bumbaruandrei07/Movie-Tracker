@@ -10,7 +10,6 @@ nav.nav {
     text-align: center;
   }
   
-  /* Styles for the movie list */
   #movie-list {
     list-style: none;
     padding: 0;
@@ -37,7 +36,6 @@ nav.nav {
     margin: 0;
   }
   
-  /* Styles for the movie form */
   #add-movie {
     max-width: 400px;
     margin: 0 auto;
@@ -77,8 +75,19 @@ nav.nav {
     margin-bottom: 10px;
     border-radius: 5px;
   }
+
+  #switch-view {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
   
-  /* Styles for the sort button */
+  #switch-view:hover {
+    background-color: #45a049;
+  }
+  
   #sort-by-rating {
     background-color: #333;
     color: #fff;
@@ -90,3 +99,63 @@ nav.nav {
   #sort-by-rating:hover {
     background-color: #555;
   }
+
+  #sort-by-name {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-name:hover {
+  background-color: #ffc300;
+}
+
+#sort-by-year {
+  background-color: #0040ff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-year:hover {
+  background-color: #0040ff;
+}
+
+#sort-by-added-date {
+  background-color: #ff66cc;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-added-date:hover {
+  background-color: #ff4db8;
+}
+
+#movie-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#movie-table th, #movie-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#movie-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+#movie-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#movie-table tr:hover {
+  background-color: #ddd;
+}
