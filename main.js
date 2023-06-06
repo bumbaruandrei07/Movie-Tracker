@@ -1,4 +1,5 @@
 const root = document.querySelector('#root');
+const MOVIES_KEY = 'movies';
 
 const images = [
     'images/harryPotter.jpg',
@@ -36,7 +37,7 @@ const movies = [
 // Functie folosita pentru a extrage filmele din localStorage
 function getMovies() {
     // Extragem valoarea corespunzatoare cheii "movies".
-    const localStorageMovies = localStorage.getItem("movies");
+    const localStorageMovies = localStorage.getItem(MOVIES_KEY);
     // Transformam filmele din string in vector de obiecte.
     const parsedMovies = JSON.parse(localStorageMovies);
     // Returnam filmele.
@@ -48,7 +49,7 @@ function setMovies(movies) {
     // Parametrul primit este transformat in sir de caracter.
     const stringifiedMovies = JSON.stringify(movies);
     // Setam valoarea corespunzatoare in localStorage.
-    localStorage.setItem("movies", stringifiedMovies);
+    localStorage.setItem(MOVIES_KEY, stringifiedMovies);
 }
 
 // Daca nu avem filmele in localStorage, atunci le adaugam.
