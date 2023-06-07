@@ -1,7 +1,7 @@
 root.innerHTML += `
-    <h2>Movies:</h2>
+    <h1 class = "movie-head">Movies saved:</h1>
     <ul id="movie-list"></ul>
-     <table id="movie-table"></table>
+    <table id="movie-table"></table>
 `;
 
 const switchViewButton = document.querySelector('#switch-view');

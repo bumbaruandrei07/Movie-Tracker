@@ -12,4 +12,3 @@ root.innerHTML += `
 <h1>${appDescription}</h1>
 </nav>
 `;
-

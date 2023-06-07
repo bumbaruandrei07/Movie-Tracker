@@ -4,7 +4,6 @@ function sortMoviesDesc(sortType) {
             const localStorageMoviesRating = getMovies();
             const sortedArray = localStorageMoviesRating.sort((movie1, movie2) => {
                 return movie2.rating - movie1.rating;
-
             });
           
             setMovies(sortedArray);

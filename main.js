@@ -28,7 +28,7 @@ const movies = [
         name: 'Star Wars',
         description: 'Fight between jedi and siths!',
         image: images[2],
-        releasedYear: 1977,
+        releasedYear: 1983,
         rating: 9,
         addedDate: new Date('2023-05-31')
     }

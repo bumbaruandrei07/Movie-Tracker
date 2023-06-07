@@ -1,4 +1,5 @@
 root.innerHTML += `
+<h1 class = "btn-options"> CHOOSE AN OPTION </h1>
 <div class = "ascButtons">
     <button id="sort-by-ascending-rating">Sort by ascending rating</button>
     <button id="sort-by-ascending-name">Sort by ascending name</button>
