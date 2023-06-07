@@ -1,151 +1,207 @@
-nav.nav {
-    background-color: #f9f9f9;
-    padding: 10px;
-  }
-  
-  nav.nav h1 {
-    font-size: 18px;
-    color: #332;
-    margin: 0;
-    text-align: center;
-  }
-  
-  #movie-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .movie {
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  .movie img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .movie p {
-    margin: 0;
-  }
-  
-  #add-movie {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #add-movie label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  #add-movie input[type="text"],
-  #add-movie input[type="number"],
-  #add-movie input[type="date"] {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  #add-movie input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #add-movie input[type="file"] {
-    margin-bottom: 10px;
-  }
-  
-  #preview {
-    max-width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
+#movie-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
 
-  #switch-view {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #switch-view:hover {
-    background-color: #45a049;
-  }
-  
-  #sort-by-rating {
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #sort-by-rating:hover {
-    background-color: #555;
-  }
+.movie {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  #sort-by-name {
-  background-color: #ffcc00;
-  color: #000;
+.movie img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie p {
+  margin: 0;
+}
+
+#add-movie {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-movie label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#add-movie input[type="text"],
+#add-movie input[type="number"],
+#add-movie input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#add-movie input[type="submit"] {
+  background-color: #333;
+  color: #fff;
   padding: 5px 10px;
   border: none;
   cursor: pointer;
 }
 
-#sort-by-name:hover {
+#add-movie input[type="file"] {
+  margin-bottom: 10px;
+}
+
+#preview {
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#switch-view {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#switch-view:hover {
+  background-color: #45a049;
+}
+
+#sort-by-ascending-rating {
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-ascending-rating:hover {
+  background-color: #555;
+}
+
+#sort-by-ascending-name {
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-ascending-name:hover {
   background-color: #ffc300;
 }
 
-#sort-by-year {
+#sort-by-ascending-year {
   background-color: #0040ff;
   color: #fff;
-  padding: 5px 10px;
+  font-size: 16px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
 }
 
-#sort-by-year:hover {
+#sort-by-ascending-year:hover {
   background-color: #0040ff;
 }
 
-#sort-by-added-date {
+#sort-by-ascending-added-date {
   background-color: #ff66cc;
   color: #fff;
-  padding: 5px 10px;
+  font-size: 16px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
 }
 
-#sort-by-added-date:hover {
+#sort-by-ascending-added-date:hover {
   background-color: #ff4db8;
 }
+
+.descButtons,
+.ascButtons {
+  display: inline-block;
+
+}
+
+.descButtons {
+  margin-top: 10px;
+}
+
+#sort-by-descending-rating {
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-descending-rating:hover {
+  background-color: #555;
+}
+
+#sort-by-descending-name {
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-descending-name:hover {
+  background-color: #ffc300;
+}
+
+#sort-by-descending-year {
+  background-color: #0040ff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-descending-year:hover {
+  background-color: #0040ff;
+}
+
+#sort-by-descending-added-date {
+  background-color: #ff66cc;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#sort-by-descending-added-date:hover {
+  background-color: #ff4db8;
+}
+
 
 #movie-table {
   border-collapse: collapse;
   width: 100%;
 }
 
-#movie-table th, #movie-table td {
+#movie-table th,
+#movie-table td {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
 
 #movie-table th {
   background-color: #f2f2f2;

@@ -10,7 +10,6 @@ class Movie {
     }
 
     getTimeElapsed() {
-
         const ONE_SECOND = 1000; // 1000 miliseconds = 1 second
         const ONE_MINUTE = ONE_SECOND * 60;
         const ONE_HOUR = ONE_MINUTE * 60;
@@ -50,7 +49,6 @@ class Movie {
             } else {
                 return `Added ${elapsedDays} days ago`;
             }
-
         }
     }
 
@@ -61,7 +59,7 @@ class Movie {
             <li class="movie">
                 <p>Name: ${this.name}</p>
                 <p>Description: ${this.description}</p>
-                <p>Released year: ${this.releasedYear}</p>
+                <p>Release year: ${this.releasedYear}</p>
                 <p>Rating: ${this.rating}</p>
                 <p>Added date: ${this.addedDate} ${timeElapsed}</p>
                 <img src = "${this.image}">
@@ -74,11 +72,11 @@ class Movie {
         const timeElapsed = this.getTimeElapsed();
         movieTable.innerHTML += `
     <tr class="movie">
-      <td>${this.name}</td>
-      <td>${this.description}</td>
-      <td>${this.releasedYear}</td>
-      <td>${this.rating}</td>
-      <td>${this.addedDate} ${timeElapsed}</td>
+      <td>Name: ${this.name}</td>
+      <td>Description: ${this.description}</td>
+      <td>Release year: ${this.releasedYear}</td>
+      <td>Rating: ${this.rating}</td>
+      <td>Added date: ${this.addedDate} ${timeElapsed}</td>
       <td><img src="${this.image}" alt="${this.name}"></td>
     </tr>
          `;

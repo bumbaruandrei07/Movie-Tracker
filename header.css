@@ -10,3 +10,14 @@ header h1 {
     margin: 0;
   }
 
+  nav.nav {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  nav.nav h1 {
+    font-size: 18px;
+    color: #332;
+    margin: 0;
+    text-align: center;
+  }

@@ -26,7 +26,7 @@ const movies = [
     },
     {
         name: 'Star Wars',
-        description: 'Fight between jedi and sith',
+        description: 'Fight between jedi and siths!',
         image: images[2],
         releasedYear: 1977,
         rating: 9,
@@ -47,12 +47,12 @@ function getMovies() {
 function setMovies(movies) {
     // the received parameter is transformed into a string
     const stringifiedMovies = JSON.stringify(movies);
-    // set the corresponding value in localStorage.
+    // set the corresponding value in localStorage
     localStorage.setItem(MOVIES_KEY, stringifiedMovies);
 }
 
 // if we don't have the movies in localStorage, then we add them
-if (getMovies() === null) {
+if (getMovies() === null){
     setMovies(movies);
 }
 
@@ -66,5 +66,4 @@ function startRenderingTable() {
     const localStorageMovies = getMovies();
     renderMovieTable(localStorageMovies);
 }
-
 window.addEventListener('load', startRendering);

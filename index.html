@@ -5,21 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
 </head>
 
 <body>
     <div id="root"></div>
-    <button id="switch-view">Switch View</button>
+
+    <div class="descButtons">
+        <button id="sort-by-descending-rating">Sort by descending rating </button>
+        <button id="sort-by-descending-name">Sort by descending name</button>
+        <button id="sort-by-descending-year">Sort by descending release date</button>
+        <button id="sort-by-descending-added-date">Sort by descending date added</button>
+    </div>
+    <h1>
+        
+        <button id="switch-view">Switch View</button>
+    </h1>
+
 
     <script src="main.js"></script>
     <script src="header.js"></script>
     <script src="movieForm.js"></script>
     <script src="movie.js"></script>
     <script src="movieList.js"></script>
-    <script src="sortButtons.js"></script>
+    <script src="sortButtonsAsc.js"></script>
+    <script src="sortButtonsDesc.js"></script>
 </body>
 
 </html>

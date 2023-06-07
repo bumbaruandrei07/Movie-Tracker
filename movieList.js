@@ -2,7 +2,6 @@ root.innerHTML += `
     <h2>Movies:</h2>
     <ul id="movie-list"></ul>
      <table id="movie-table"></table>
-    
 `;
 
 const switchViewButton = document.querySelector('#switch-view');
@@ -24,6 +23,5 @@ function renderMovieTable(movies) {
         newMovie.renderMovieAsTable();
     });
 }
-
 
 switchViewButton.addEventListener('click', startRenderingTable);

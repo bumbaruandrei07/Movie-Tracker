@@ -11,7 +11,7 @@ root.innerHTML += `
     <input type = 'file' name='img' id = 'img' accept = "image/png, image/jpg">
     <img id='preview' src='' style='display: none;' alt=''>
    
-    <label for='releasedYear'>Released year:</label>
+    <label for='releasedYear'>Release year:</label>
     <input type ='number' name= 'releasedYear' id = 'releasedYear'>
 
     <label for='rating'>Movie rating:</label>
@@ -63,14 +63,13 @@ function validateMovieName(name) {
   return true;
 }
 
-function validateDescriptionMovie(description) {
-  if (description.length < 4) {
+function validateDescriptionMovie(description){
+  if(description.length < 4){
     alert("Movie description must contains at least 4 characters!");
     return false;
   }
   return true;
 }
-
 
 function addFormFunctionality() {
   const form = document.querySelector('#add-movie');
@@ -102,14 +101,13 @@ function addFormFunctionality() {
       return;
     }
 
-    if (!validateMovieName(name)) {
+    if(!validateMovieName(name)){
       return;
     }
 
-    if (!validateDescriptionMovie(description)) {
+    if(!validateDescriptionMovie(description)){
       return;
     }
-
 
     reader.onload = function (event) {
       const base64Image = event.target.result;
