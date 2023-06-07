@@ -1,5 +1,5 @@
 const appName = 'Movie Tracker';
-const appDescription = 'Movie Tracker is a web app used for storing the disered movies for each user around the world';
+const appDescription = 'Movie Tracker is a web app used for storing desired movies for each user around the world';
 
 root.innerHTML += `
   <header>
