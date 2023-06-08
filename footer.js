@@ -1,6 +1,6 @@
 const footer = document.createElement('footer');
 const description = 'Watch future updates on:'
-const gitRepo = 'https://github.com/bumbaruandrei07/MovieTracker';
+const gitRepo = 'https://github.com/bumbaruandrei07/movie-tracker';
 
 footer.innerHTML = `
   <h3 class="footer-heading">
