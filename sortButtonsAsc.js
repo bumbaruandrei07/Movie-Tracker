@@ -5,7 +5,7 @@ root.innerHTML += `
     <button id="sort-by-ascending-name">Sort by ascending name</button>
     <button id="sort-by-ascending-year">Sort by ascending release date</button>
     <button id="sort-by-ascending-added-date">Sort by ascending date added</button>
-    <div class = "ascButtons">
+   </div>
 `;
 
 function sortMoviesAsc(sortType) {

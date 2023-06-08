@@ -1,5 +1,5 @@
 const footer = document.createElement('footer');
-const description = 'Watch this project also on:'
+const description = 'Watch future updates on:'
 const gitRepo = 'https://github.com/bumbaruandrei07/MovieTracker';
 
 footer.innerHTML = `

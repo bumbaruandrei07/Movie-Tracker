@@ -96,10 +96,9 @@
   background-color: #333;
   color: #fff;
   font-size: 25px;
-  padding: 10px 26px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  margin-right: 10px;
 }
 
 #sort-by-ascending-rating:hover {
@@ -109,10 +108,12 @@
 #sort-by-ascending-name {
   background-color: #ffcc00;
   color: #000;
-  font-size: 27px;
+  font-size: 25px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  margin-left:35px;
+  margin-right: 50px;
 }
 
 #sort-by-ascending-name:hover {
@@ -123,9 +124,10 @@
   background-color: #0040ff;
   color: #fff;
   font-size: 25px;
-  padding: 10px 27px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
+  margin-left:5px;
 }
 
 #sort-by-ascending-year:hover {
@@ -136,9 +138,10 @@
   background-color: #ff66cc;
   color: #fff;
   font-size: 25px;
-  padding: 10px 32px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
+  margin-left:60px;
 }
 
 #sort-by-ascending-added-date:hover {
@@ -148,10 +151,15 @@
 .descButtons,
 .ascButtons {
   display: inline-block;
+  margin-bottom: 20px;
+}
+
+.ascButtons{
+  margin-bottom: 40px;
 }
 
 .descButtons {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #sort-by-descending-rating {
@@ -171,9 +179,11 @@
   background-color: #ffcc00;
   color: #000;
   font-size: 25px;
-  padding: 10px 28px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
+  margin-left: 15px;
+  margin-right: 40px;
 }
 
 #sort-by-descending-name:hover {
@@ -196,10 +206,11 @@
 #sort-by-descending-added-date {
   background-color: #ff66cc;
   color: #fff;
-  font-size: 26px;
+  font-size: 25px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  margin-left:50px;
 }
 
 #sort-by-descending-added-date:hover {
