@@ -13,14 +13,15 @@ function sortMoviesAsc(sortType) {
         // sort by rating button is pressed
         case "SORT_BY_RATING":
             const localStorageMoviesRating = getMovies();
-            const sortedArray = localStorageMoviesRating.sort((movie1, movie2) => {
+            const sortedArrayByRating = localStorageMoviesRating.sort((movie1, movie2) => {
                 return movie1.rating - movie2.rating;
 
             });
             //Movies are added to localStorage
-            setMovies(sortedArray);
+            setMovies(sortedArrayByRating);
             // Movies are displayed
-            renderMovieList(sortedArray);
+            renderMovieList(sortedArrayByRating);
+            // renderMovieTable(sortedArrayByRating);
             break;
 
         case "SORT_BY_NAME":
@@ -36,6 +37,7 @@ function sortMoviesAsc(sortType) {
             });
             setMovies(sortedArrayByName);
             renderMovieList(sortedArrayByName);
+            // renderMovieTable(sortedArrayByName);
             break;
         case "SORT_BY_RELEASED_YEAR":
             const localStorageMoviesReleasedYear = getMovies();
@@ -54,6 +56,7 @@ function sortMoviesAsc(sortType) {
             });
             setMovies(sortedArrayByReleasedYear);
             renderMovieList(sortedArrayByReleasedYear);
+            // renderMovieTable(sortedArrayByReleasedYear);
             break;
 
         case "SORT_BY_ADDED_DATE":
@@ -69,6 +72,7 @@ function sortMoviesAsc(sortType) {
             });
             setMovies(sortedArrayByAddedDate);
             renderMovieList(sortedArrayByAddedDate);
+            // renderMovieTable(sortedArrayByAddedDate);
             break;
     }
 }

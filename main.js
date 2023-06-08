@@ -12,7 +12,7 @@ const movies = [
         name: 'Harry Potter',
         description: 'Wizards fight against evil forces!',
         image: images[0],
-        releasedYear: 2001,
+        releasedYear: 2011,
         rating: 9,
         addedDate: new Date('2023-05-29')
     },

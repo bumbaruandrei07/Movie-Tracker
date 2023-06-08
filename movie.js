@@ -70,15 +70,22 @@ class Movie {
     renderMovieAsTable() {
         const movieTable = document.querySelector('#movie-table');
         const timeElapsed = this.getTimeElapsed();
-        movieTable.innerHTML += `
-    <tr class="movie">
-      <td>Name: ${this.name}</td>
-      <td>Description: ${this.description}</td>
-      <td>Release year: ${this.releasedYear}</td>
-      <td>Rating: ${this.rating}</td>
-      <td>Added date: ${this.addedDate} ${timeElapsed}</td>
-      <td><img src="${this.image}" alt="${this.name}"></td>
-    </tr>
-         `;
+
+        fetchMovieData(this.name)
+            .then(movieData => {
+                movieTable.innerHTML += `
+            <tr class="movie">
+              <td>Name: ${movieData.Title}</td>
+              <td>Description: ${movieData.Plot}</td>
+              <td>Release year: ${movieData.Year}</td>
+              <td>Rating: ${movieData.imdbRating}</td>
+              <td>Added date: ${this.addedDate} ${timeElapsed}</td>
+              <td><img src="${movieData.Poster}" alt="${movieData.Title}"></td>
+            </tr>
+                 `;
+            })
+            .catch(err => {
+                console.log('Error fetching movie data:', err);
+            });
     }
 }
