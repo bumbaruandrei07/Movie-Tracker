@@ -52,7 +52,7 @@ function setMovies(movies) {
 }
 
 // if we don't have the movies in localStorage, then we add them
-if (getMovies() === null){
+if (getMovies() === null) {
     setMovies(movies);
 }
 

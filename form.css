@@ -1,51 +1,51 @@
 #add-movie {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #add-movie h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  #add-movie label {
-    display:flex;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  #add-movie input[type="text"],
-  #add-movie input[type="number"],
-  #add-movie input[type="date"],
-  #add-movie input[type="datetime-local"],
-  #add-movie input[type="file"] {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #preview {
-    max-width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: block;
-  }
-  
-  #submit {
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #submit:hover {
-    background-color: #555;
-  }
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-movie h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#add-movie label {
+  display: flex;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#add-movie input[type="text"],
+#add-movie input[type="number"],
+#add-movie input[type="date"],
+#add-movie input[type="datetime-local"],
+#add-movie input[type="file"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#preview {
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+#submit {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #555;
+}

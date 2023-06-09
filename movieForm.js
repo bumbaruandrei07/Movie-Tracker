@@ -63,8 +63,8 @@ function validateMovieName(name) {
   return true;
 }
 
-function validateDescriptionMovie(description){
-  if(description.length < 4){
+function validateDescriptionMovie(description) {
+  if (description.length < 4) {
     alert("Movie description must contains at least 4 characters!");
     return false;
   }
@@ -101,14 +101,16 @@ function addFormFunctionality() {
       return;
     }
 
-    if(!validateMovieName(name)){
+    if (!validateMovieName(name)) {
       return;
     }
 
-    if(!validateDescriptionMovie(description)){
+    if (!validateDescriptionMovie(description)) {
       return;
     }
 
+    //  reader object of FileReader class reads files asynchronously
+    //  we can only access its result in the onload event handler
     reader.onload = function (event) {
       const base64Image = event.target.result;
       const previewImage = document.querySelector('#preview');
