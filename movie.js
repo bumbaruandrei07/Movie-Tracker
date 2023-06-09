@@ -70,7 +70,8 @@ class Movie {
     renderMovieAsTable() {
         const movieTable = document.querySelector('#movie-table');
         const timeElapsed = this.getTimeElapsed();
-
+        //retrieving data from API
+        // Title, Plot, Year, imdbRating, and Poster are specific properties returned by the OMDB API
         fetchMovieData(this.name)
             .then(movieData => {
                 movieTable.innerHTML += `

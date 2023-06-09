@@ -123,8 +123,11 @@ function addFormFunctionality() {
         addedDate: addedDateValue
       };
 
+      // Retrieving products from localStorage
       const localStorageMovies = getMovies();
+      // Adding a new movie to the list
       localStorageMovies.push(newMovie);
+      // Adding the modified array to localStorage
       setMovies(localStorageMovies);
       renderMovieList(localStorageMovies);
     };
