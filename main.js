@@ -21,7 +21,7 @@ const movies = [
         description: 'Aliens attack on earth!',
         image: images[1],
         releasedYear: 1996,
-        rating: 8,
+        rating: 7,
         addedDate: new Date('2023-05-30')
     },
     {
@@ -29,7 +29,7 @@ const movies = [
         description: 'Fight between jedi and siths!',
         image: images[2],
         releasedYear: 1983,
-        rating: 9,
+        rating: 8,
         addedDate: new Date('2023-05-31')
     }
 ];
