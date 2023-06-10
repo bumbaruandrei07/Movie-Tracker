@@ -70,20 +70,25 @@ class Movie {
     renderMovieAsTable() {
         const movieTable = document.querySelector('#movie-table');
         const timeElapsed = this.getTimeElapsed();
-        //retrieving data from API
-        // Title, Plot, Year, imdbRating, and Poster are specific properties returned by the OMDB API
+        // retrieving data from API
+        // Title, Plot, Year, imdbRating and Poster are specific properties returned by OMDB API
+        // only if the movie exists in OMDB API then it will be added to table list
         fetchMovieData(this.name)
             .then(movieData => {
-                movieTable.innerHTML += `
-            <tr class="movie">
-              <td>Name: ${movieData.Title}</td>
-              <td>Description: ${movieData.Plot}</td>
-              <td>Release year: ${movieData.Year}</td>
-              <td>Rating: ${movieData.imdbRating}</td>
-              <td>Added date: ${this.addedDate} ${timeElapsed}</td>
-              <td><img src="${movieData.Poster}" alt="${movieData.Title}"></td>
-            </tr>
-                 `;
+                if (movieData && movieData.Response !== "False") {
+                    movieTable.innerHTML += `
+                <tr class="movie">
+                  <td>Name: ${movieData.Title}</td>
+                  <td>Description: ${movieData.Plot}</td>
+                  <td>Release year: ${movieData.Year}</td>
+                  <td>Rating: ${movieData.imdbRating}</td>
+                  <td>Added date: ${this.addedDate} ${timeElapsed}</td>
+                  <td><img src="${movieData.Poster}" alt="${movieData.Title}"></td>
+                </tr>
+              `;
+                } else {
+                   return;
+                }
             })
             .catch(err => {
                 console.log('Error fetching movie data:', err);
