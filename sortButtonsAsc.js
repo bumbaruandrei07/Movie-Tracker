@@ -37,14 +37,14 @@ function sortMoviesAsc(sortType) {
             setMovies(sortedArrayByName);
             renderMovieList(sortedArrayByName);
             break;
-        case "SORT_BY_RELEASED_YEAR":
-            const localStorageMoviesReleasedYear = getMovies();
-            const sortedArrayByReleasedYear = localStorageMoviesReleasedYear.sort((movie1, movie2) => {
+        case "SORT_BY_RELEASE_YEAR":
+            const localStorageMoviesReleaseYear = getMovies();
+            const sortedArrayByReleaseYear = localStorageMoviesReleaseYear.sort((movie1, movie2) => {
                 // If the first element is smaller, a negative number is returned, which means that the elements will not be changed.            
-                if (movie1.releasedYear < movie2.releasedYear) {
+                if (movie1.releaseYear < movie2.releaseYear) {
                     return -1;
 
-                } else if (movie1.releasedYear > movie2.releasedYear) {
+                } else if (movie1.releaseYear > movie2.releaseYear) {
                     return 1;
 
                 } else {
@@ -52,8 +52,8 @@ function sortMoviesAsc(sortType) {
                 }
 
             });
-            setMovies(sortedArrayByReleasedYear);
-            renderMovieList(sortedArrayByReleasedYear);
+            setMovies(sortedArrayByReleaseYear);
+            renderMovieList(sortedArrayByReleaseYear);
             break;
 
         case "SORT_BY_ADDED_DATE":
@@ -77,7 +77,7 @@ function addAscendingSortingFunctionality() {
 
     const sortByRating = document.querySelector('#sort-by-ascending-rating');
     const sortByName = document.querySelector('#sort-by-ascending-name');
-    const sortByReleasedYear = document.querySelector('#sort-by-ascending-year');
+    const sortByReleaseYear = document.querySelector('#sort-by-ascending-year');
     const sortByAddedDate = document.querySelector('#sort-by-ascending-added-date');
     sortByRating.addEventListener('click', () => {
         sortMoviesAsc('SORT_BY_RATING');
@@ -87,8 +87,8 @@ function addAscendingSortingFunctionality() {
         sortMoviesAsc('SORT_BY_NAME');
     })
 
-    sortByReleasedYear.addEventListener('click', () => {
-        sortMoviesAsc('SORT_BY_RELEASED_YEAR');
+    sortByReleaseYear.addEventListener('click', () => {
+        sortMoviesAsc('SORT_BY_RELEASE_YEAR');
     })
 
     sortByAddedDate.addEventListener('click', () => {

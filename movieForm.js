@@ -3,57 +3,20 @@ root.innerHTML += `
     <h1> Add a new movie </h1>
     <label for='name'>Name:</label>
     <input type='text' name='name' id='name'>
-
     <label for='description'>Description:</label>
     <input type='text' name='description' id='description'>
-
     <label for='file'>Choose file to upload</label>
     <input type = 'file' name='img' id = 'img' accept = "image/png, image/jpg">
     <img id='preview' src='' style='display: none;' alt=''>
-   
-    <label for='releasedYear'>Release year:</label>
-    <input type ='number' name= 'releasedYear' id = 'releasedYear'>
-
+    <label for='releaseYear'>Release year:</label>
+    <input type ='number' name= 'releaseYear' id = 'releaseYear'>
     <label for='rating'>Movie rating:</label>
     <input type = 'number' name = 'rating' id = 'rating' step=".1">
-
     <label for='addedDate'>Added Date:</label>
     <input type='datetime-local' name ='addedDate' id='addedDate'>
-  
     <input type ='submit' id ="submit">
-    
 </form>
 `;
-
-function validateDate(date) {
-  const now = new Date();
-  if (date > now) {
-    alert("You cannot select a date later than the current day!");
-    return false;
-  }
-  return true;
-}
-
-function validateRating(rating) {
-  if (rating <= 1 || rating > 10) {
-    alert("Rating must be a positive value not grater than 10!");
-    return false;
-  }
-  return true;
-}
-
-function validateReleasedYear(releasedYear) {
-  //we get the value of the current year 
-  const currentDate = new Date().getFullYear();
-  //we parse the value of current year as a number beacuse releasedYear is a number type
-  const parsedReleasedYear = parseInt(currentDate, 10);
-
-  if (releasedYear > parsedReleasedYear || releasedYear < 1920) {
-    alert("Released year cannot be after current year or before 1920!");
-    return false;
-  }
-  return true;
-}
 
 function validateMovieName(name) {
   if (name.trim().length === 0) {
@@ -71,6 +34,56 @@ function validateDescriptionMovie(description) {
   return true;
 }
 
+function validateReleaseYear(releaseYear) {
+  // we get the value of the current year 
+  const currentDate = new Date().getFullYear();
+  // we parse the value of current year as a number beacuse releaseYear is a number type
+  const parsedReleaseYear = parseInt(currentDate, 10);
+  if (!releaseYear) {
+    alert("You must select the release year!");
+    return false;
+  }
+  else if (releaseYear > parsedReleaseYear) {
+    alert("Release year cannot be after current year");
+    return false;
+  }
+  else if (releaseYear < 1920) {
+    alert("Release year must be after 1920");
+    return false;
+  }
+  return true;
+}
+
+function validateRating(rating) {
+  if (!rating) {
+    alert("You must select the rating!");
+    return false;
+  }
+  if (rating < 1 || rating > 10) {
+    alert("Rating must be a positive value between 1 and 10!");
+    return false;
+  }
+  return true;
+}
+
+function validateDate(date) {
+  const now = new Date();
+  const lowerLimit = new Date('1920-01-01');
+  if (isNaN(date)) {
+    alert("You must select the added date!");
+    return false;
+  }
+  else if (date > now) {
+    alert("You cannot select a date later than the current day!");
+    return false;
+  }
+  else if (date < lowerLimit) {
+    alert("You cannot a date before 1920");
+    return false;
+  }
+  return true;
+}
+
 function addFormFunctionality() {
   const form = document.querySelector('#add-movie');
   form.addEventListener('submit', event => {
@@ -83,13 +96,21 @@ function addFormFunctionality() {
     const img = fileInput.files[0];
     const reader = new FileReader();
 
-    const releasedYear = document.querySelector('#releasedYear').value;
+    const releaseYear = document.querySelector('#releaseYear').value;
     const rating = document.querySelector('#rating').value;
 
     const addedDateInput = document.querySelector('#addedDate');
     const addedDateValue = new Date(addedDateInput.value);
 
-    if (!validateDate(addedDateValue)) {
+    if (!validateMovieName(name)) {
+      return;
+    }
+
+    if (!validateDescriptionMovie(description)) {
+      return;
+    }
+
+    if (!validateReleaseYear(releaseYear)) {
       return;
     }
 
@@ -97,15 +118,7 @@ function addFormFunctionality() {
       return;
     }
 
-    if (!validateReleasedYear(releasedYear)) {
-      return;
-    }
-
-    if (!validateMovieName(name)) {
-      return;
-    }
-
-    if (!validateDescriptionMovie(description)) {
+    if (!validateDate(addedDateValue)) {
       return;
     }
 
@@ -120,7 +133,7 @@ function addFormFunctionality() {
         name: name,
         description: description,
         image: base64Image,
-        releasedYear: releasedYear,
+        releaseYear: releaseYear,
         rating: rating,
         addedDate: addedDateValue
       };

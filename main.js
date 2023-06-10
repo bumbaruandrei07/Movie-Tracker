@@ -12,7 +12,7 @@ const movies = [
         name: 'Harry Potter',
         description: 'Wizards fight against evil forces!',
         image: images[0],
-        releasedYear: 2011,
+        releaseYear: 2011,
         rating: 9,
         addedDate: new Date('2023-05-29')
     },
@@ -20,7 +20,7 @@ const movies = [
         name: 'Independence Day',
         description: 'Aliens attack on earth!',
         image: images[1],
-        releasedYear: 1996,
+        releaseYear: 1996,
         rating: 7,
         addedDate: new Date('2023-05-30')
     },
@@ -28,7 +28,7 @@ const movies = [
         name: 'Star Wars',
         description: 'Fight between jedi and siths!',
         image: images[2],
-        releasedYear: 1983,
+        releaseYear: 1983,
         rating: 8,
         addedDate: new Date('2023-05-31')
     }

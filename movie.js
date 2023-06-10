@@ -1,10 +1,10 @@
 class Movie {
 
-    constructor(name, description, image, releasedYear, rating, addedDate) {
+    constructor(name, description, image, releaseYear, rating, addedDate) {
         this.name = name;
         this.description = description;
         this.image = image;
-        this.releasedYear = releasedYear;
+        this.releaseYear = releaseYear;
         this.rating = rating;
         this.addedDate = new Date(addedDate);
     }
@@ -59,7 +59,7 @@ class Movie {
             <li class="movie">
                 <p>Name: ${this.name}</p>
                 <p>Description: ${this.description}</p>
-                <p>Release year: ${this.releasedYear}</p>
+                <p>Release year: ${this.releaseYear}</p>
                 <p>Rating: ${this.rating}</p>
                 <p>Added date: ${this.addedDate} ${timeElapsed}</p>
                 <img src = "${this.image}">

@@ -5,12 +5,9 @@ function sortMoviesDesc(sortType) {
             const sortedArray = localStorageMoviesRating.sort((movie1, movie2) => {
                 return movie2.rating - movie1.rating;
             });
-          
             setMovies(sortedArray);
-          
             renderMovieList(sortedArray);
             break;
-
         case "SORT_BY_NAME":
             const localStorageMoviesName = getMovies();
             const sortedArrayByName = localStorageMoviesName.sort((movie1, movie2) => {
@@ -25,16 +22,14 @@ function sortMoviesDesc(sortType) {
             setMovies(sortedArrayByName);
             renderMovieList(sortedArrayByName);
             break;
-        case "SORT_BY_RELEASED_YEAR":
-            const localStorageMoviesReleasedYear = getMovies();
-            const sortedArrayByReleasedYear = localStorageMoviesReleasedYear.sort((movie1, movie2) => {
-                return movie2.releasedYear - movie1.releasedYear;
-
+        case "SORT_BY_RELEASE_YEAR":
+            const localStorageMoviesReleaseYear = getMovies();
+            const sortedArrayByReleaseYear = localStorageMoviesReleaseYear.sort((movie1, movie2) => {
+                return movie2.releaseYear - movie1.releaseYear;
             });
-            setMovies(sortedArrayByReleasedYear);
-            renderMovieList(sortedArrayByReleasedYear);
+            setMovies(sortedArrayByReleaseYear);
+            renderMovieList(sortedArrayByReleaseYear);
             break;
-       
         case "SORT_BY_ADDED_DATE":
             const localStorageMoviesAddedDate = getMovies();
             const sortedArrayByAddedDate = localStorageMoviesAddedDate.sort((movie1, movie2) => {
@@ -49,7 +44,6 @@ function sortMoviesDesc(sortType) {
             setMovies(sortedArrayByAddedDate);
             renderMovieList(sortedArrayByAddedDate);
             break;
-
     }
 }
 
@@ -57,7 +51,7 @@ function addDescendingSortingFunctionality() {
    
     const sortByRating = document.querySelector('#sort-by-descending-rating');
     const sortByName = document.querySelector('#sort-by-descending-name');
-    const sortByReleasedYear = document.querySelector('#sort-by-descending-year');
+    const sortByReleaseYear = document.querySelector('#sort-by-descending-year');
     const sortByAddedDate = document.querySelector('#sort-by-descending-added-date');
     sortByRating.addEventListener('click', () => {
         sortMoviesDesc('SORT_BY_RATING');
@@ -67,8 +61,8 @@ function addDescendingSortingFunctionality() {
         sortMoviesDesc('SORT_BY_NAME');
     })
 
-    sortByReleasedYear.addEventListener('click', () => {
-        sortMoviesDesc('SORT_BY_RELEASED_YEAR');
+    sortByReleaseYear.addEventListener('click', () => {
+        sortMoviesDesc('SORT_BY_RELEASE_YEAR');
     })
 
     sortByAddedDate.addEventListener('click', () => {
