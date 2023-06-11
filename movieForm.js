@@ -34,6 +34,14 @@ function validateDescriptionMovie(description) {
   return true;
 }
 
+function isMovieImageSelected(image) {
+  if (!image) {
+    alert("You must select an image!");
+    return false;
+  }
+  return true;
+}
+
 function validateReleaseYear(releaseYear) {
   // we get the value of the current year 
   const currentDate = new Date().getFullYear();
@@ -129,6 +137,7 @@ function addFormFunctionality() {
       const previewImage = document.querySelector('#preview');
       previewImage.src = base64Image;
       previewImage.style.display = 'block';
+
       const newMovie = {
         name: name,
         description: description,
@@ -147,6 +156,10 @@ function addFormFunctionality() {
       renderMovieList(localStorageMovies);
     };
 
+    if (!isMovieImageSelected(img)) {
+      return;
+    }
+    
     reader.readAsDataURL(img);
   });
 }

@@ -2,7 +2,7 @@
   background-color: darkkhaki;
   color: #fff;
   padding: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 #movie-list {
@@ -96,7 +96,7 @@
 }
 
 #sort-by-ascending-added-date {
-  background-color: #ff66cc;
+  background-color: #ff66b3;
   color: #fff;
   font-size: 20px;
   padding: 5px 10px;
@@ -166,7 +166,7 @@
 }
 
 #sort-by-descending-added-date {
-  background-color: #ff66cc;
+  background-color: #ff66b3;
   color: #fff;
   font-size: 20px;
   padding: 5px 10px;

@@ -1,5 +1,5 @@
 root.innerHTML += `
-    <h1 class = "movie-head">Movies saved:</h1>
+    <h1 class = "movie-head">Movies saved</h1>
     <ul id="movie-list"></ul>
     <table id="movie-table"></table>
 `;
