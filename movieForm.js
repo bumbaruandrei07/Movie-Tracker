@@ -6,7 +6,7 @@ root.innerHTML += `
     <label for='description'>Description:</label>
     <input type='text' name='description' id='description'>
     <label for='file'>Choose file to upload</label>
-    <input type = 'file' name='img' id = 'img' accept = "image/png, image/jpg">
+    <input type = 'file' name='img' id = 'img' accept = 'image/png, image/jpg'>
     <img id='preview' src='' style='display: none;' alt=''>
     <label for='releaseYear'>Release year:</label>
     <input type ='number' name= 'releaseYear' id = 'releaseYear'>
@@ -14,7 +14,8 @@ root.innerHTML += `
     <input type = 'number' name = 'rating' id = 'rating' step=".1">
     <label for='addedDate'>Added Date:</label>
     <input type='datetime-local' name ='addedDate' id='addedDate'>
-    <input type ='submit' id ="submit">
+    <input type ='submit' id ='submit'>
+    <input type='reset' value='Clear' id='clear-btn'>
 </form>
 `;
 
@@ -159,9 +160,17 @@ function addFormFunctionality() {
     if (!isMovieImageSelected(img)) {
       return;
     }
-    
+
     reader.readAsDataURL(img);
   });
 }
 
-window.addEventListener('load', addFormFunctionality);
+function attachClearButton() {
+  const clearBtn = document.querySelector('#clear-btn');
+  clearBtn.addEventListener('click', clearForm);
+}
+
+window.addEventListener('load', function () {
+  addFormFunctionality();
+  attachClearButton();
+});

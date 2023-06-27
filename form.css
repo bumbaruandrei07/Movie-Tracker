@@ -38,7 +38,9 @@
   display: block;
 }
 
-#submit {
+#submit,
+#add-movie input[type='reset'] {
+  width: 48%;
   background-color: #333;
   color: #fff;
   padding: 5px 10px;
@@ -46,6 +48,12 @@
   cursor: pointer;
 }
 
-#submit:hover {
+#add-movie input[type='reset'] {
+  float: right;
+  margin-left: 10px;
+}
+
+#submit:hover,
+#add-movie input[type='reset']:hover {
   background-color: #555;
 }
